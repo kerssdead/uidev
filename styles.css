@@ -21,18 +21,39 @@
     background-color: #ffffff;
 }
 
+.hidden {
+    display: none;
+    visibility: hidden;
+    max-width: 0 !important;
+    max-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.icon {
+    min-width: 32px;
+    min-height: 32px;
+    width: 32px;
+    height: 32px;
+    max-width: 32px;
+    max-height: 32px;
+}
+
+.icon-active {
+    cursor: pointer;
+}
+
 body {
+    display: flexbox;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
 }
 
 /* #region Header */
 
 header {
+    flex-grow: 1;
     display: flex;
-    flex: auto;
     align-items: center;
     padding: 8px;
 }
@@ -40,7 +61,6 @@ header {
 .header-button {
     display: inline-flex;
     padding: 16px 24px 16px 24px;
-    /* margin: 18px; */
     border-radius: 32px;
 }
 
@@ -59,7 +79,8 @@ header {
     color: #ffffff;
 }
 
-.header-button:hover a {
+.header-button:hover a,
+.header-button:hover span {
     color: #000000;
 }
 
@@ -72,18 +93,50 @@ header {
     align-items: center;
     text-align: center;
     display: flex;
+    color: #ffffff;
+
+    cursor: default;
 }
 
 .navigation-buttons {
     display: flex;
 }
 
+.header-reverse {
+    flex-direction: row-reverse;
+    flex-grow: 1;
+}
+
+.find-row {
+    flex-grow: 1;
+    display: inline-flex;
+    padding: 16px;
+    align-items: center;
+    border-radius: 32px;
+    max-height: 35px;
+}
+
+.find-row textarea {
+    resize: none;
+    border: 0;
+    margin: 0 8px 0 8px;
+    flex-grow: 2;
+    outline: none;
+
+    overflow: hidden;
+    font-size: 28px;
+    font-family: "Gothic A1";
+    font-weight: bold;
+}
+
+.find-row img {
+    flex-grow: 1;
+}
+
 /* #endregion */
 /* #region PageContent */
 
 .page-content {
-    flex: auto;
-
     border-radius: 32px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 
@@ -94,10 +147,12 @@ header {
 /* #region Footer */
 
 footer {
+    flex-grow: 1;
     position: absolute;
-    flex: auto;
+    width: 100%;
+    text-align: center;
     bottom: 0;
-    align-items: center;
+    color: #ffffff;
 }
 
 /* #endregion */

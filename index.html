@@ -4,15 +4,21 @@
 <head>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="styles.css"/>
-    <link rel="scripts" href="scripts.js"/>
     <link rel="stylesheet" href="./font/GothicA1-Regular.woff">
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./scripts.js"></script>
     <title>Главная страница</title>
 </head>
 
 <body class="background-color">
     <header>
         <img src="./img/logo.svg"/>    
-        <div class="navigation-buttons">
+        <div class="find-row hidden white-color" id="find-row">
+            <textarea rows=1 placeholder="Искать книгу"></textarea>
+            <img class="icon icon-active" src="./img/icons/magnify.svg"></img>
+            <img class="icon icon-active" src="./img/icons/close-thick.svg" onclick="openFind()"></img>
+        </div>
+        <div class="navigation-buttons" id="navigation-buttons-0">
             <div class="header-button">
                 <a href="./index.html">
                     <span>
@@ -34,23 +40,31 @@
                     </span>
                 </a>
             </div>
-            <div class="header-button">
-                <!-- Нужен скрипт для открытия окна поиска -->
+            <div class="header-button" onclick="openFind()">
                 <span>
                     Искать книгу
                 </span>
+            </div>
+        </div>
+        <div class="navigation-buttons header-reverse" id="navigation-buttons-1">
+            <div class="header-button">
+                <a href="./login.html">
+                    <span>
+                        Войти
+                    </span>
+                </a>
             </div>
         </div>
     </header>
 
     <div class="page-content white-color">
         <span>
-           page-content 
-        </span>
+           page-content<br>
+        </span>                                                    
     </div>
 
     <footer>
-        <span>temp text</span>
+        <span>Все права защищены. Техническая поддержка help@email.com</span>
     </footer>
 </body>
 
