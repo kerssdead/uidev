@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="./font/GothicA1-Regular.woff">
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./scripts.js"></script>
+    <title>Корзина</title>
+</head>
+
+<body class="background-color">
+    <header>
+        <img src="./img/logo.svg"/>    
+        <div class="navigation-buttons" id="navigation-buttons-0">
+            <div class="header-button">
+                <a href="./index.html">
+                    <span>
+                        Книги
+                    </span>
+                </a>
+            </div>
+            <div class="header-button">
+                <a href="./index.html">
+                    <span>
+                        Лучшие предложения
+                    </span>
+                </a>
+            </div>
+            <div class="header-button">
+                <a href="./about.html">
+                    <span>
+                        О магазине
+                    </span>
+                </a>
+            </div>
+            <div class="header-button" id="find-button" onclick="openFind()">
+                <span>
+                    Искать книгу
+                </span>
+            </div>
+        </div>
+        <div class="find-row hidden white-color" id="find-row">
+            <textarea rows=1 placeholder="Искать книгу"></textarea>
+            <img class="icon icon-active" src="./img/icons/magnify.svg"></img>
+            <img class="icon icon-active" src="./img/icons/close-thick.svg" onclick="openFind()"></img>
+        </div>
+        <div class="navigation-buttons header-reverse" id="navigation-buttons-1">
+            <div class="header-button">
+                <a href="./login.html">
+                    <span>
+                        Войти
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-content white-color cart-page-content">
+        <span class="span-header-large">
+            Ваша корзина
+        </span>
+        <div class="cart-list">
+            <div id="cart-item-0" class="item-card content-shadow white-color">
+                <a href="./book.html">
+                    <img src="./img/book.png">
+                </a>
+                <span class="span-header-small">
+                    Братья Карамзины
+                </span>
+                <span>
+                    Ф. М. Достоевский
+                </span>
+                <div class="rating-and-price">
+                    <div class="rating-div">
+                        <div name="rating" class="rating green-color">
+                            <span>
+                                97.6%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <div name="price" class="price green-color">
+                            <span>
+                                189 ₽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="red-button">
+                    <span class="span-header-small">
+                        Отказаться
+                    </span>
+                </div>
+            </div>
+            <div id="cart-item-1" class="item-card content-shadow white-color">
+                <a href="./book.html">
+                    <img src="./img/book.png">
+                </a>
+                <span class="span-header-small">
+                    Братья Карамзины
+                </span>
+                <span>
+                    Ф. М. Достоевский
+                </span>
+                <div class="rating-and-price">
+                    <div class="rating-div">
+                        <div name="rating" class="rating green-color">
+                            <span>
+                                97.6%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <div name="price" class="price green-color">
+                            <span>
+                                189 ₽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="red-button">
+                    <span class="span-header-small">
+                        Отказаться
+                    </span>
+                </div>
+            </div>
+            <div id="cart-item-2" class="item-card content-shadow white-color">
+                <a href="./book.html">
+                    <img src="./img/book.png">
+                </a>
+                <span class="span-header-small">
+                    Братья Карамзины
+                </span>
+                <span>
+                    Ф. М. Достоевский
+                </span>
+                <div class="rating-and-price">
+                    <div class="rating-div">
+                        <div name="rating" class="rating green-color">
+                            <span>
+                                97.6%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <div name="price" class="price green-color">
+                            <span>
+                                189 ₽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="red-button">
+                    <span class="span-header-small">
+                        Отказаться
+                    </span>
+                </div>
+            </div>
+            <div id="total" class="cart-total content-shadow white-color">
+                <span class="span-header-small">
+                    Все товары
+                </span>
+                <div class="total-list">
+                    <div class="total-item white-color content-shadow">
+                        <div class="total-item-desc">
+                            <span class="span-header-small">
+                                Братья Карамзины
+                            </span>
+                            <span>
+                                Ф. М. Достоевский
+                            </span>
+                        </div>
+                        <div class="green-color content-shadow total-item-price">
+                            <span class="span-header-large">
+                                189 ₽
+                            </span>
+                        </div>
+                    </div>
+                    <div class="total-item white-color content-shadow">
+                        <div class="total-item-desc">
+                            <span class="span-header-small">
+                                Братья Карамзины
+                            </span>
+                            <span>
+                                Ф. М. Достоевский
+                            </span>
+                        </div>
+                        <div class="green-color content-shadow total-item-price">
+                            <span class="span-header-large">
+                                189 ₽
+                            </span>
+                        </div>
+                    </div>
+                    <div class="total-item white-color content-shadow">
+                        <div class="total-item-desc">
+                            <span class="span-header-small">
+                                Братья Карамзины
+                            </span>
+                            <span>
+                                Ф. М. Достоевский
+                            </span>
+                        </div>
+                        <div class="green-color content-shadow total-item-price">
+                            <span class="span-header-large">
+                                189 ₽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <span class="span-total span-header-large">
+                    567 ₽
+                </span>
+            </div>
+        </div>
+        <div class="cart-submit green-button">
+            <span>
+                Оплатить
+            </span>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <span>Все права защищены. Техническая поддержка help@email.com</span>
+    </footer>
+</body>
+
+</html>

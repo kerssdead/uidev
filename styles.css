@@ -292,6 +292,48 @@ header {
     background-color: #86CD82;
 }
 
+.red-button {
+    background-color: #DE5252;
+    color: white !important;
+    height: 32px;
+    border-radius: 16px;
+}
+
+.red-button span {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 8px 0 8px 0;
+    cursor: default;
+    line-height: 16px;
+    color: white !important;
+}
+
+.red-button:hover {
+    background-color: #C63E3E;
+}
+
+.green-button {
+    background-color: #86CD82;
+    color: white !important;
+    height: 32px;
+    border-radius: 16px;
+}
+
+.green-button span {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 8px 0 8px 0;
+    cursor: default;
+    line-height: 16px;
+    color: white !important;
+}
+
+.green-button:hover {
+    background-color: #599456;
+}
+
 .left-border-radius-medium {
     border-radius: 16px 0 0 16px !important;
 }
@@ -864,7 +906,87 @@ header {
 
 /* #region CartPage  */
 
+.item-card .green-color span {
+    color: white;
+}
 
+.cart-page-content {
+    display: flex;
+    flex-direction: column;
+    font-family: "Gothic A1";
+    font-weight: bold;
+}
+
+.cart-list {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 224px;
+}
+
+.cart-total {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 32px;
+    padding: 16px;
+    margin: 16px;
+}
+
+.total-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.total-item {
+    display: flex;
+    flex-direction: row;
+    border-radius: 16px;
+    padding: 16px;;
+}
+
+.total-item-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.total-item-price {
+    border-radius: 32px;
+    margin-left: auto;
+    color: white;
+    padding: 8px;
+}
+
+.span-total {
+    margin-left: auto;
+}
+
+.item-card .red-button{
+    height: 64px;
+}
+
+.item-card .red-button span {
+    padding: 0 !important;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.cart-submit {
+    align-self: center;
+    border-radius: 32px !important;
+    width: 25% !important;
+    height: 64px !important;
+}
+
+.cart-submit span {
+    padding: 0 !important;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+}
 
 /* #endregion */
 
