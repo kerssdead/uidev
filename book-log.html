@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="./font/GothicA1-Regular.woff">
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./scripts.js"></script>
+    <title>Книга "Братья Карамазовы"</title>
+</head>
+
+<body class="background-color">
+    <header>
+        <img src="./img/logo.svg"/>    
+        <div class="navigation-buttons" id="navigation-buttons-0">
+            <div class="header-button">
+                <a href="./index-log.html">
+                    <span>
+                        Книги
+                    </span>
+                </a>
+            </div>
+            <div class="header-button">
+                <a href="./index-log.html">
+                    <span>
+                        Лучшие предложения
+                    </span>
+                </a>
+            </div>
+            <div class="header-button">
+                <a href="./about-log.html">
+                    <span>
+                        О магазине
+                    </span>
+                </a>
+            </div>
+            <div class="header-button" id="find-button" onclick="openFind()">
+                <span>
+                    Искать книгу
+                </span>
+            </div>
+        </div>
+        <div class="find-row hidden white-color" id="find-row">
+            <textarea rows=1 placeholder="Искать книгу"></textarea>
+            <img class="icon icon-active" src="./img/icons/magnify.svg"></img>
+            <img class="icon icon-active" src="./img/icons/close-thick.svg" onclick="openFind()"></img>
+        </div>
+        <div class="navigation-buttons header-reverse" id="navigation-buttons-1">
+            <a href="./index.html">
+                <img class="svg-white" src="./img/icons/logout.svg">
+            </a>
+            <a href="./cart.html">
+                <img class="svg-white" src="./img/icons/cart-outline.svg">
+            </a>
+            <a href="./user.html">
+                <img class="svg-white" src="./img/icons/account.svg">
+            </a>
+            <span class="header-name">
+                Сергей Николаевич
+            </span>
+        </div>
+    </header>
+
+    <div class="page-content white-color">
+        <div class="pic-and-rating">
+            <img src="./img/book-large.png">
+            <div class="rating">
+                <span class="span-header">
+                    Читательский рейтинг&nbsp;
+                </span>
+                <div class="green-color item-rating">
+                    <span>
+                        97.6%
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="name-description">
+            <span class="span-header-large">
+                Братья Карамазовы
+            </span>
+            <span class="span-header-medium">
+                Автор: Ф. М. Достоевский
+            </span>
+            <span class="span-header book-about">
+                О книге
+            </span>
+            <span>
+                Последний, самый объемный и один из наиболее известных романов Ф. М. Достоевского обращает читателя к вневременным нравственно-философским вопросам о грехе, воздаянии, сострадании и милосердии. Книга, которую сам писатель определил как «роман о богохульстве и опровержении его», явилась попыткой «решить вопрос о человеке», «разгадать тайну» человека, что, по Достоевскому, означало «решить вопрос о Боге». Сквозь призму почти детективной истории о жестоком убийстве главы провинциальной семьи Карамазовых автор повествует об извечной борьбе Божественного и дьявольского в человеческой душе. Один из самых глубоких в мировой литературе опытов отражения христианского сознания, «Братья Карамазовы» стали в XX веке объектом парадоксальных философских и психоаналитических интерпретаций.
+            </span>
+            <div class="book-price-div">
+                <span class="span-header-small">
+                    Действует скидка!
+                </span>
+                <div class="book-price">
+                    <span class="price-crossed span-header-large">
+                        309 ₽
+                    </span>
+                    <div class="green-color book-current-price">
+                        <span class="span-header-large">
+                            189 ₽
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="book-buttons">
+                <div class="blue-button content-shadow">
+                    <span>
+                        Добавить в корзину
+                    </span>
+                </div>
+                <div class="white-button content-shadow">
+                    <span>
+                        Добавить в избранное
+                    </span>
+                </div>
+                <div class="white-button content-shadow">
+                    <span>
+                        Забронировать
+                    </span> 
+                </div>
+            </div>
+            <div class="comments">
+                <span class="span-header">
+                    Отзывы читателей
+                </span>
+                <div class="book-sort">
+                    <div>
+                        <span class="span-header-small">
+                            Сортировка
+                        </span>
+                    </div>
+                    <div>
+                        <select name="order-type" class="content-shadow">
+                            <option value="1">по популярности</option>
+                            <option value="2">по цене</option>
+                            <option value="3">по новизне</option>
+                            <option value="4">по количеству страниц</option>
+                            <option value="5">по алфавиту</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="order-by" class="content-shadow">
+                            <option value="1">по возрастанию</option>
+                            <option value="2">по убыванию</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="comments-list">
+                    <div id="comment-0" class="comment white-color content-shadow">
+                        <div class="comment-header">
+                            <div class="content-shadow white-color">
+                                <img src="./img/icons/thumb-up-outline.svg">
+                                <span>
+                                    Рекомендую
+                                </span>
+                            </div>
+                            <div class="content-shadow white-color">
+                                <span>
+                                    Читатель: В. А. Иванов
+                                </span>
+                            </div>
+                        </div>
+                        <span class="comment-text">
+                            Прекраснейшая книга! Энциклопедия человеческой души! Достоевский в этой книге просто вышел на пик своего мастерства. Здесь затрагиваются темы любви и ненависти, веры и атеизма, истины и лжи и другие вещи. Не буду писать о всех предпосылках и истории романа, это уже написано и сказано много-много раз до меня, но отмечу одну простую вещь. Для Достоевского самое страшное, не только крах мировой гармонии, не только отсутствие свободы, но и крах семьи. Крах традиций, крах тех ценностей которые нас объединяют. Этого надо опасаться и этому надо противопоставить нечто иное. Например идею сострадания и любви к ближнему. 
+                        </span>
+                        <div class="comment-footer">
+                            <span>
+                                Отзыв был полезен?
+                            </span>
+                            <div class="white-button content-shadow">
+                                <span>
+                                    Да
+                                </span> 
+                            </div>
+                            <div class="white-button content-shadow">
+                                <span>
+                                    Нет
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="comment-1" class="comment white-color content-shadow">
+                        <div class="comment-header">
+                            <div class="content-shadow white-color">
+                                <img src="./img/icons/thumb-down-outline.svg">
+                                <span>
+                                    Не рекомендую
+                                </span>
+                            </div>
+                            <div class="content-shadow white-color">
+                                <span>
+                                    Читатель: Ф. М. Достоевский
+                                </span>
+                            </div>
+                        </div>
+                        <span class="comment-text">
+                            Отвратительная книга
+                        </span>
+                        <div class="comment-footer">
+                            <span>
+                                Отзыв был полезен?
+                            </span>
+                            <div class="white-button content-shadow">
+                                <span>
+                                    Да
+                                </span> 
+                            </div>
+                            <div class="white-button content-shadow">
+                                <span>
+                                    Нет
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="no-margins white-color white-button content-shadow comments-load-more">
+                        <span>
+                            Загрузить ещё
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <span>Все права защищены. Техническая поддержка help@email.com</span>
+    </footer>
+</body>
+
+</html>

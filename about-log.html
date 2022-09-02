@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="./font/GothicA1-Regular.woff">
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./scripts.js"></script>
+    <title>О нас</title>
+</head>
+
+<body class="background-color">
+    <header>
+        <img src="./img/logo.svg"/>    
+        <div class="navigation-buttons" id="navigation-buttons-0">
+            <div class="header-button">
+                <a href="./index-log.html">
+                    <span>
+                        Книги
+                    </span>
+                </a>
+            </div>
+            <div class="header-button">
+                <a href="./index-log.html">
+                    <span>
+                        Лучшие предложения
+                    </span>
+                </a>
+            </div>
+            <div class="header-button">
+                <a href="./about-log.html">
+                    <span>
+                        О магазине
+                    </span>
+                </a>
+            </div>
+            <div class="header-button" id="find-button" onclick="openFind()">
+                <span>
+                    Искать книгу
+                </span>
+            </div>
+        </div>
+        <div class="find-row hidden white-color" id="find-row">
+            <textarea rows=1 placeholder="Искать книгу"></textarea>
+            <img class="icon icon-active" src="./img/icons/magnify.svg"></img>
+            <img class="icon icon-active" src="./img/icons/close-thick.svg" onclick="openFind()"></img>
+        </div>
+        <div class="navigation-buttons header-reverse" id="navigation-buttons-1">
+            <a href="./index.html">
+                <img class="svg-white" src="./img/icons/logout.svg">
+            </a>
+            <a href="./cart.html">
+                <img class="svg-white" src="./img/icons/cart-outline.svg">
+            </a>
+            <a href="./user.html">
+                <img class="svg-white" src="./img/icons/account.svg">
+            </a>
+            <span class="header-name">
+                Сергей Николаевич
+            </span>
+        </div>
+    </header>
+
+    <div class="page-content white-color">
+        <div class="page-content-about">
+            <div class="about">
+                <span class="span-header-large">
+                    О нас
+                </span>
+                <span class="span-header-small">
+                    Нашей компании, розничных магазинов и данного интернет-магазина не существует.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit pellentesque. Quisque malesuada placerat metus nec viverra. Integer sit amet lorem sed massa rhoncus porttitor auctor in eros. Mauris lorem mi, ornare rutrum nisi ac, hendrerit placerat mauris. Mauris pellentesque dui sit amet aliquet molestie. Nunc et vehicula odio. Nunc nec auctor ex. Morbi sollicitudin ultricies massa, non vulputate nisl posuere at. Donec blandit justo ac elit sollicitudin pharetra. Vivamus at lorem lectus. Pellentesque et imperdiet dolor. In porttitor feugiat viverra. Donec leo nunc, rutrum sit amet ligula vel, lacinia faucibus justo. Nulla convallis nulla tincidunt velit elementum dapibus. Nam id blandit enim.
+                    Praesent et sapien mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur aliquet dignissim elit, ut rutrum augue ultricies non. Fusce iaculis lorem vitae accumsan luctus. Donec nisi mauris, facilisis a vestibulum luctus, tempor sed mi. Ut pharetra lobortis nisl, vel consectetur diam egestas at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt nisl velit, id lacinia risus consectetur nec. Mauris vestibulum pellentesque sem. Nullam luctus dui sem, non vulputate tortor mollis et. Donec malesuada tincidunt pretium. Donec a orci sed arcu egestas bibendum sed a nulla. Sed et tincidunt lacus. Ut a nibh sed est accumsan facilisis. Nullam nibh sapien, pharetra at lorem eget, imperdiet tincidunt est. Pellentesque vel gravida odio. Proin eleifend justo in finibus fringilla. Fusce sed scelerisque leo. Morbi sit amet vestibulum ante. Nunc nec ligula quis lacus hendrerit condimentum at in eros. Quisque non tellus eu enim mollis laoreet. In sapien mi, iaculis in molestie eget, euismod ut velit. Aenean nec ex risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer quam nunc, congue vitae malesuada vel, bibendum sed erat. Nunc urna turpis, finibus at magna in, lobortis tincidunt orci. Хоть у нас и нет розничных магазинов, но у нас есть карта с нашими магазинами. Можно только представлять, как было бы замечательно посещать эти магазины.
+                </span>
+            </div>
+            <div class="about-on-map">
+                <span class="span-header-large">
+                    Магазины на карте
+                </span>
+                <img src="./img/map.png">
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <span>Все права защищены. Техническая поддержка help@email.com</span>
+    </footer>
+</body>
+
+</html>

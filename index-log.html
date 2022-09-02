@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="./font/GothicA1-Regular.woff">
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./scripts.js"></script>
+    <title>Главная страница</title>
+</head>
+
+<body class="background-color">
+    <header>
+        <img src="./img/logo.svg"/>    
+        <div class="navigation-buttons" id="navigation-buttons-0">
+            <div class="header-button">
+                <a href="./index-log.html">
+                    <span>
+                        Книги
+                    </span>
+                </a>
+            </div>
+            <div class="header-button">
+                <a href="./index-log.html">
+                    <span>
+                        Лучшие предложения
+                    </span>
+                </a>
+            </div>
+            <div class="header-button">
+                <a href="./about-log.html">
+                    <span>
+                        О магазине
+                    </span>
+                </a>
+            </div>
+            <div class="header-button" id="find-button" onclick="openFind()">
+                <span>
+                    Искать книгу
+                </span>
+            </div>
+        </div>
+        <div class="find-row hidden white-color" id="find-row">
+            <textarea rows=1 placeholder="Искать книгу"></textarea>
+            <img class="icon icon-active" src="./img/icons/magnify.svg"></img>
+            <img class="icon icon-active" src="./img/icons/close-thick.svg" onclick="openFind()"></img>
+        </div>
+        <div class="navigation-buttons header-reverse" id="navigation-buttons-1">
+            <a href="./index.html">
+                <img class="svg-white" src="./img/icons/logout.svg">
+            </a>
+            <a href="./cart.html">
+                <img class="svg-white" src="./img/icons/cart-outline.svg">
+            </a>
+            <a href="./user.html">
+                <img class="svg-white" src="./img/icons/account.svg">
+            </a>
+            <span class="header-name">
+                Сергей Николаевич
+            </span>
+        </div>
+    </header>
+
+    <div class="page-content white-color">
+        <div class="div-sort-filter content-shadow">
+            <div class="sort">
+                <span class="span-header">
+                    Сортировка
+                </span>
+                <select name="order-type" class="content-shadow">
+                    <option value="1">по популярности</option>
+                    <option value="2">по цене</option>
+                    <option value="3">по новизне</option>
+                    <option value="4">по количеству страниц</option>
+                    <option value="5">по алфавиту</option>
+                </select>
+                <select name="order-by" class="content-shadow">
+                    <option value="1">по возрастанию</option>
+                    <option value="2">по убыванию</option>
+                </select>
+            </div>
+            <div name="categories" class="categories">
+                <span class="span-header">
+                    Категории
+                </span>
+                <div id="cat-0">
+                    <input type="checkbox" class="content-shadow">
+                    <span>
+                        Художественная литература
+                    </span>
+                </div>
+                <div id="cat-1">
+                    <input type="checkbox" class="content-shadow">
+                    <span>
+                        Научная литература
+                    </span>
+                </div>
+                <div id="cat-2">
+                    <input type="checkbox" class="content-shadow">
+                    <span>
+                        Деловая литература
+                    </span>
+                </div>
+                <div id="cat-3">
+                    <input type="checkbox" class="content-shadow">
+                    <span>
+                        Философия
+                    </span>
+                </div>
+                <div name="show-more" class="content-shadow white-button">
+                    <span>
+                        Показать больше
+                    </span>
+                </div>
+            </div>
+            <div name="authors" class="authors">
+                <span class="span-header">
+                    Автор
+                </span>
+                <div id="aut-0">
+                    <input type="checkbox" class="content-shadow">
+                    <span>
+                        А. С. Пушкин
+                    </span>
+                </div>
+                <div id="aut-1">
+                    <input type="checkbox" class="content-shadow">
+                    <span>
+                        М. Ю. Лермонтов
+                    </span>
+                </div>
+                <div id="aut-2">
+                    <input type="checkbox" class="content-shadow">
+                    <span>
+                        Л. Н. Толстой
+                    </span>
+                </div>
+                <div id="aut-3">
+                    <input type="checkbox" class="content-shadow">
+                    <span>
+                        М. А. Булгаков
+                    </span>
+                </div>
+                <div name="show-more" class="content-shadow white-button">
+                    <span>
+                        Показать больше
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <div id="card-0" class="white-color item-card content-shadow">
+                <a href="./book-log.html">
+                    <img src="./img/book.png">
+                </a>
+                <span class="span-header-small">
+                    Братья Карамазовы
+                </span>
+                <span>
+                    Ф. М. Достоевский
+                </span>
+                <div class="rating-and-price">
+                    <div class="rating-div">
+                        <div name="rating" class="rating green-color">
+                            <span>
+                                97.6%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <div name="price" class="price green-color">
+                            <span>
+                                189 ₽
+                            </span>
+                        </div>
+                        <div name="old-price" class="price-crossed">
+                            <span>
+                                309 ₽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-shadow white-color item-buttons">
+                    <div name="to-cart" class="blue-button left-border-radius-medium">
+                        <span>
+                            В корзину
+                        </span>
+                    </div>
+                    <div name="to-favorite" class="white-button right-border-radius-medium">
+                        <span>
+                            В избранное
+                        </span>
+                    </div>
+                </div> 
+            </div>
+            <div id="card-1" class="white-color item-card content-shadow">
+                <a href="./book-log.html">
+                    <img src="./img/book.png">
+                </a>
+                <span class="span-header-small">
+                    Братья Карамазовы
+                </span>
+                <span>
+                    Ф. М. Достоевский
+                </span>
+                <div class="rating-and-price">
+                    <div class="rating-div">
+                        <div name="rating" class="rating green-color">
+                            <span>
+                                97.6%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <div name="price" class="price green-color">
+                            <span>
+                                189 ₽
+                            </span>
+                        </div>
+                        <div name="old-price" class="price-crossed">
+                            <span>
+                                309 ₽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-shadow white-color item-buttons">
+                    <div name="to-cart" class="blue-button left-border-radius-medium">
+                        <span>
+                            В корзину
+                        </span>
+                    </div>
+                    <div name="to-favorite" class="white-button right-border-radius-medium">
+                        <span>
+                            В избранное
+                        </span>
+                    </div>
+                </div> 
+            </div>
+            <div id="card-2" class="white-color item-card content-shadow">
+                <a href="./book-log.html">
+                    <img src="./img/book.png">
+                </a>
+                <span class="span-header-small">
+                    Братья Карамазовы
+                </span>
+                <span>
+                    Ф. М. Достоевский
+                </span>
+                <div class="rating-and-price">
+                    <div class="rating-div">
+                        <div name="rating" class="rating green-color">
+                            <span>
+                                97.6%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <div name="price" class="price green-color">
+                            <span>
+                                189 ₽
+                            </span>
+                        </div>
+                        <div name="old-price" class="price-crossed">
+                            <span>
+                                309 ₽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-shadow white-color item-buttons">
+                    <div name="to-cart" class="blue-button left-border-radius-medium">
+                        <span>
+                            В корзину
+                        </span>
+                    </div>
+                    <div name="to-favorite" class="white-button right-border-radius-medium">
+                        <span>
+                            В избранное
+                        </span>
+                    </div>
+                </div> 
+            </div>
+            <div id="card-3" class="white-color item-card content-shadow">
+                <a href="./book-log.html">
+                    <img src="./img/book.png">
+                </a>
+                <span class="span-header-small">
+                    Братья Карамазовы
+                </span>
+                <span>
+                    Ф. М. Достоевский
+                </span>
+                <div class="rating-and-price">
+                    <div class="rating-div">
+                        <div name="rating" class="rating green-color">
+                            <span>
+                                97.6%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <div name="price" class="price green-color">
+                            <span>
+                                189 ₽
+                            </span>
+                        </div>
+                        <div name="old-price" class="price-crossed">
+                            <span>
+                                309 ₽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-shadow white-color item-buttons">
+                    <div name="to-cart" class="blue-button left-border-radius-medium">
+                        <span>
+                            В корзину
+                        </span>
+                    </div>
+                    <div name="to-favorite" class="white-button right-border-radius-medium">
+                        <span>
+                            В избранное
+                        </span>
+                    </div>
+                </div> 
+            </div>
+            <div id="card-4" class="white-color item-card content-shadow">
+                <a href="./book-log.html">
+                    <img src="./img/book.png">
+                </a>
+                <span class="span-header-small">
+                    Братья Карамазовы
+                </span>
+                <span>
+                    Ф. М. Достоевский
+                </span>
+                <div class="rating-and-price">
+                    <div class="rating-div">
+                        <div name="rating" class="rating green-color">
+                            <span>
+                                97.6%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <div name="price" class="price green-color">
+                            <span>
+                                189 ₽
+                            </span>
+                        </div>
+                        <div name="old-price" class="price-crossed">
+                            <span>
+                                309 ₽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-shadow white-color item-buttons">
+                    <div name="to-cart" class="blue-button left-border-radius-medium">
+                        <span>
+                            В корзину
+                        </span>
+                    </div>
+                    <div name="to-favorite" class="white-button right-border-radius-medium">
+                        <span>
+                            В избранное
+                        </span>
+                    </div>
+                </div> 
+            </div>
+            <div id="card-5" class="white-color item-card content-shadow">
+                <a href="./book-log.html">
+                    <img src="./img/book.png">
+                </a>
+                <span class="span-header-small">
+                    Братья Карамазовы
+                </span>
+                <span>
+                    Ф. М. Достоевский
+                </span>
+                <div class="rating-and-price">
+                    <div class="rating-div">
+                        <div name="rating" class="rating green-color">
+                            <span>
+                                97.6%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <div name="price" class="price green-color">
+                            <span>
+                                189 ₽
+                            </span>
+                        </div>
+                        <div name="old-price" class="price-crossed">
+                            <span>
+                                309 ₽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-shadow white-color item-buttons">
+                    <div name="to-cart" class="blue-button left-border-radius-medium">
+                        <span>
+                            В корзину
+                        </span>
+                    </div>
+                    <div name="to-favorite" class="white-button right-border-radius-medium">
+                        <span>
+                            В избранное
+                        </span>
+                    </div>
+                </div> 
+            </div>
+            <div id="card-6" class="white-color item-card content-shadow">
+                <a href="./book-log.html">
+                    <img src="./img/book.png">
+                </a>
+                <span class="span-header-small">
+                    Братья Карамазовы
+                </span>
+                <span>
+                    Ф. М. Достоевский
+                </span>
+                <div class="rating-and-price">
+                    <div class="rating-div">
+                        <div name="rating" class="rating green-color">
+                            <span>
+                                97.6%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <div name="price" class="price green-color">
+                            <span>
+                                189 ₽
+                            </span>
+                        </div>
+                        <div name="old-price" class="price-crossed">
+                            <span>
+                                309 ₽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-shadow white-color item-buttons">
+                    <div name="to-cart" class="blue-button left-border-radius-medium">
+                        <span>
+                            В корзину
+                        </span>
+                    </div>
+                    <div name="to-favorite" class="white-button right-border-radius-medium">
+                        <span>
+                            В избранное
+                        </span>
+                    </div>
+                </div> 
+            </div>
+            <div id="card-7" class="white-color item-card content-shadow">
+                <a href="./book-log.html">
+                    <img src="./img/book.png">
+                </a>
+                <span class="span-header-small">
+                    Братья Карамазовы
+                </span>
+                <span>
+                    Ф. М. Достоевский
+                </span>
+                <div class="rating-and-price">
+                    <div class="rating-div">
+                        <div name="rating" class="rating green-color">
+                            <span>
+                                97.6%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <div name="price" class="price green-color">
+                            <span>
+                                189 ₽
+                            </span>
+                        </div>
+                        <div name="old-price" class="price-crossed">
+                            <span>
+                                309 ₽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-shadow white-color item-buttons">
+                    <div name="to-cart" class="blue-button left-border-radius-medium">
+                        <span>
+                            В корзину
+                        </span>
+                    </div>
+                    <div name="to-favorite" class="white-button right-border-radius-medium">
+                        <span>
+                            В избранное
+                        </span>
+                    </div>
+                </div> 
+            </div>
+            <div id="card-8" class="white-color item-card content-shadow">
+                <a href="./book-log.html">
+                    <img src="./img/book.png">
+                </a>
+                <span class="span-header-small">
+                    Братья Карамазовы
+                </span>
+                <span>
+                    Ф. М. Достоевский
+                </span>
+                <div class="rating-and-price">
+                    <div class="rating-div">
+                        <div name="rating" class="rating green-color">
+                            <span>
+                                97.6%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <div name="price" class="price green-color">
+                            <span>
+                                189 ₽
+                            </span>
+                        </div>
+                        <div name="old-price" class="price-crossed">
+                            <span>
+                                309 ₽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-shadow white-color item-buttons">
+                    <div name="to-cart" class="blue-button left-border-radius-medium">
+                        <span>
+                            В корзину
+                        </span>
+                    </div>
+                    <div name="to-favorite" class="white-button right-border-radius-medium">
+                        <span>
+                            В избранное
+                        </span>
+                    </div>
+                </div> 
+            </div>
+            <div id="card-9" class="white-color item-card content-shadow">
+                <a href="./book-log.html">
+                    <img src="./img/book.png">
+                </a>
+                <span class="span-header-small">
+                    Братья Карамазовы
+                </span>
+                <span>
+                    Ф. М. Достоевский
+                </span>
+                <div class="rating-and-price">
+                    <div class="rating-div">
+                        <div name="rating" class="rating green-color">
+                            <span>
+                                97.6%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <div name="price" class="price green-color">
+                            <span>
+                                189 ₽
+                            </span>
+                        </div>
+                        <div name="old-price" class="price-crossed">
+                            <span>
+                                309 ₽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-shadow white-color item-buttons">
+                    <div name="to-cart" class="blue-button left-border-radius-medium">
+                        <span>
+                            В корзину
+                        </span>
+                    </div>
+                    <div name="to-favorite" class="white-button right-border-radius-medium">
+                        <span>
+                            В избранное
+                        </span>
+                    </div>
+                </div> 
+            </div>
+            <div id="card-10" class="white-color item-card content-shadow">
+                <a href="./book-log.html">
+                    <img src="./img/book.png">
+                </a>
+                <span class="span-header-small">
+                    Братья Карамазовы
+                </span>
+                <span>
+                    Ф. М. Достоевский
+                </span>
+                <div class="rating-and-price">
+                    <div class="rating-div">
+                        <div name="rating" class="rating green-color">
+                            <span>
+                                97.6%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <div name="price" class="price green-color">
+                            <span>
+                                189 ₽
+                            </span>
+                        </div>
+                        <div name="old-price" class="price-crossed">
+                            <span>
+                                309 ₽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-shadow white-color item-buttons">
+                    <div name="to-cart" class="blue-button left-border-radius-medium">
+                        <span>
+                            В корзину
+                        </span>
+                    </div>
+                    <div name="to-favorite" class="white-button right-border-radius-medium">
+                        <span>
+                            В избранное
+                        </span>
+                    </div>
+                </div> 
+            </div>
+            <div id="card-11" class="white-color item-card content-shadow">
+                <a href="./book-log.html">
+                    <img src="./img/book.png">
+                </a>
+                <span class="span-header-small">
+                    Братья Карамазовы
+                </span>
+                <span>
+                    Ф. М. Достоевский
+                </span>
+                <div class="rating-and-price">
+                    <div class="rating-div">
+                        <div name="rating" class="rating green-color">
+                            <span>
+                                97.6%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <div name="price" class="price green-color">
+                            <span>
+                                189 ₽
+                            </span>
+                        </div>
+                        <div name="old-price" class="price-crossed">
+                            <span>
+                                309 ₽
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-shadow white-color item-buttons">
+                    <div name="to-cart" class="blue-button left-border-radius-medium">
+                        <span>
+                            В корзину
+                        </span>
+                    </div>
+                    <div name="to-favorite" class="white-button right-border-radius-medium">
+                        <span>
+                            В избранное
+                        </span>
+                    </div>
+                </div> 
+            </div>
+            <div class="page-list white-color content-shadow">
+                <div name="prev-page" class="white-button left-border-radius-medium-gt">
+                    <img src="./img/icons/chevron-left.svg">
+                </div>
+                <div class="white-button no-border-radius">
+                    <span>
+                        2
+                    </span>
+                </div>
+                <div class="white-button no-border-radius">
+                    <span>
+                        3
+                    </span>
+                </div>
+                <div class="current-page">
+                    <span>
+                        4
+                    </span>
+                </div>
+                <div class="white-button no-border-radius">
+                    <span>
+                        5
+                    </span>
+                </div>
+                <div class="white-button no-border-radius">
+                    <span>
+                        6
+                    </span>
+                </div>
+                <div name="next-page" class="white-button right-border-radius-medium-gt">
+                    <img src="./img/icons/chevron-right.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <span>Все права защищены. Техническая поддержка help@email.com</span>
+    </footer>
+</body>
+
+</html>
