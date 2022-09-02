@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="./font/GothicA1-Regular.woff">
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./scripts.js"></script>
+    <title>Личная страница</title>
+</head>
+
+<body class="background-color">
+    <header>
+        <img src="./img/logo.svg"/>    
+        <div class="navigation-buttons" id="navigation-buttons-0">
+            <div class="header-button">
+                <a href="./index.html">
+                    <span>
+                        Книги
+                    </span>
+                </a>
+            </div>
+            <div class="header-button">
+                <a href="./index.html">
+                    <span>
+                        Лучшие предложения
+                    </span>
+                </a>
+            </div>
+            <div class="header-button">
+                <a href="./about.html">
+                    <span>
+                        О магазине
+                    </span>
+                </a>
+            </div>
+            <div class="header-button" id="find-button" onclick="openFind()">
+                <span>
+                    Искать книгу
+                </span>
+            </div>
+        </div>
+        <div class="find-row hidden white-color" id="find-row">
+            <textarea rows=1 placeholder="Искать книгу"></textarea>
+            <img class="icon icon-active" src="./img/icons/magnify.svg"></img>
+            <img class="icon icon-active" src="./img/icons/close-thick.svg" onclick="openFind()"></img>
+        </div>
+        <div class="navigation-buttons header-reverse" id="navigation-buttons-1">
+            <div class="header-button">
+                <a href="./login.html">
+                    <span>
+                        Войти
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-content white-color">
+        <div class="user-about">
+            <div>
+                <span class="span-header-large">
+                    Рябко Сергей Николаевич
+                </span>
+            </div>
+            <div class="user-inf">
+                <div>
+                    <img src="./img/user-picture.png" class="user-picture">
+                    <div class="blue-button content-shadow">
+                        <span>
+                            Редактировать профиль
+                        </span>
+                    </div>
+                </div>
+                <div class="user-inf-grid">
+                    <div class="user-information white-color content-shadow">
+                        <div id="user-email">
+                            <span class="span-label">
+                                Электронная почта
+                            </span>
+                            <br>
+                            <span class="span-label-data">
+                                me@email.com
+                                <img class="svg-primary" src="./img/icons/check-decagram.svg">
+                            </span>
+                        </div>
+                        <div id="user-birth">
+                            <span class="span-label">
+                                Дата рождения
+                            </span>
+                            <br>
+                            <span class="span-label-data">
+                                30.03.2002
+                            </span>
+                        </div>
+                        <div id="user-phone">
+                            <span class="span-label">
+                                Телефон
+                            </span>
+                            <br>
+                            <span class="span-label-data">
+                                +7(999)999-99-99
+                                <img class="svg-primary" src="./img/icons/check-decagram.svg">
+                            </span>
+                        </div>
+                        <div id="user-sex">
+                            <span class="span-label">
+                                Пол
+                            </span>
+                            <br>
+                            <span class="span-label-data">
+                                Мужской                                
+                            </span>
+                        </div>
+                    </div>
+                    <div class="user-orders white-color content-shadow">
+                        <span class="span-label-data">
+                            Ваши заказы
+                        </span>
+                        <div class="user-orders-list">
+                            <div id="user-order-0" class="user-order white-color content-shadow">
+                                <div class="order-information">
+                                    <span class="span-label-data">
+                                        Заказ А-0000
+                                    </span>
+                                    <span class="span-label-data order-delivery-date">
+                                        Дата доставки: 01.01.2022
+                                    </span>
+                                </div>
+                                <div class="content-shadow green-color delivery-status">
+                                    <span>
+                                        Доставлено
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="user-order-1" class="user-order white-color content-shadow">
+                                <div class="order-information">
+                                    <span class="span-label-data">
+                                        Заказ А-0001
+                                    </span>
+                                    <span class="span-label-data order-delivery-date">
+                                        Дата доставки: 02.01.2022
+                                    </span>
+                                </div>
+                                <div class="content-shadow red-color delivery-status">
+                                    <span>
+                                        Не доставлено
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blue-button content-shadow">
+                            <span>
+                                Посмотреть все
+                            </span>
+                        </div>
+                    </div>
+                    <div class="user-favorite white-color content-shadow">
+                        <span class="span-label-data">
+                            Избранное
+                        </span>
+                        <div class="user-orders-list">
+                            <div id="user-favorite-0" class="user-order white-color content-shadow">
+                                <div class="order-information">
+                                    <span class="span-label-data">
+                                        Братья Карамзины
+                                    </span>
+                                    <span class="span-label-data order-delivery-date">
+                                        Ф. М. Достоевский
+                                    </span>
+                                </div>
+                                <div class="content-shadow green-color delivery-status">
+                                    <span>
+                                        189 ₽
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="user-favorite-1" class="user-order white-color content-shadow">
+                                <div class="order-information">
+                                    <span class="span-label-data">
+                                        Братья Карамзины
+                                    </span>
+                                    <span class="span-label-data order-delivery-date">
+                                        Ф. М. Достоевский
+                                    </span>
+                                </div>
+                                <div class="content-shadow green-color delivery-status">
+                                    <span>
+                                        189 ₽
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blue-button content-shadow">
+                            <span>
+                                Посмотреть все
+                            </span>
+                        </div>
+                    </div>
+                    <div class="user-payment white-color content-shadow">
+                        <span class="span-label-data">
+                            Привязанные способы оплаты
+                        </span>
+                        <div class="user-payment-list">
+                            <div id="user-payment-0" class="user-payment-container content-shadow white-color">
+                                <div class="card">
+                                    <span class="span-label-data">
+                                        <img src="./img/icons/credit-card-outline.svg">
+                                        Сбербанк
+                                    </span>
+                                </div>
+                                <div class="card-about">
+                                    <span class="span-label-data">
+                                        Заканчивается<br>на 0000
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="user-payment-1" class="user-payment-container content-shadow white-color">
+                                <div class="card">
+                                    <span class="span-label-data">
+                                        <img src="./img/icons/credit-card-outline.svg">
+                                        Сбербанк
+                                    </span>
+                                </div>
+                                <div class="card-about">
+                                    <span class="span-label-data">
+                                        Заканчивается<br>на 9999
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <span>Все права защищены. Техническая поддержка help@email.com</span>
+    </footer>
+</body>
+
+</html>
