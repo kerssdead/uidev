@@ -3,14 +3,14 @@
     font-style: normal;
     font-weight: 400;
     src: local("Gothic A1"),
-        url("./fonts/GothicA1-Regular.woff") format("woff")
+        url("/fonts/GothicA1-Regular.woff") format("woff")
 }
 
 @font-face {
     font-family: "Gothic A1";
     font-style: normal;
     font-weight: bold;
-    src: local("./fonts/GothicA1-Bold.woff") format("woff")
+    src: local("/fonts/GothicA1-Bold.woff") format("woff")
 }
 
 .background-color {
@@ -59,6 +59,62 @@ body {
 
 .content-shadow {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+input[type='checkbox'] {
+    appearance: none;
+    cursor: pointer;
+}
+
+input[type='checkbox']:before {
+    content: "";
+    display: block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+
+input[type='checkbox']:checked:before {
+    background-image: url("/img/icons/check.svg");
+}
+
+input[type='radio'] {
+    appearance: none;
+    cursor: pointer;
+}
+
+input[type='radio']:before {
+    content: "";
+    display: block;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    border-radius: 16px;
+}
+
+.radio-active {
+    width: 14px;
+    height: 14px;
+    border-radius: 16px;
+    border: #26408B solid 1px;
+}
+
+input[type='radio'] ~ .radio-active:after {
+    display: none;
+}
+
+input[type='radio']:checked:before {
+    top: 1px;
+    left: 1px;
+    width: 10px;
+    height: 10px;
+    border-radius: 12px;
+    border: 0;
+    background-color: #26408B;
+}
+
+input[type='radio']:checked ~ .radio-active:after {
+    display: block;
 }
 
 /* #region Header */  
@@ -947,7 +1003,7 @@ header {
 .cart-list {
     display: flex;
     flex-direction: row;
-    margin-bottom: 224px;
+    /* margin-bottom: 224px; */
 }
 
 .cart-total {
@@ -1013,6 +1069,23 @@ header {
     text-align: center;
     height: 100%;
     justify-content: center;
+}
+
+.payment {
+    width: 336px;
+    height: 140px;
+    border-radius: 32px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: auto;
+    margin-right: 16px;
+    margin-bottom: 36px;
+}
+
+.payment span {
+    font-weight: bold;
 }
 
 /* #endregion */
