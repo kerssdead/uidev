@@ -2,6 +2,18 @@ $(document).ready(function () {
     if (parseInt($('body')[0].scrollHeight.slice(0, -2)) > parseInt($('body')[0].clientHeight.slice(0, -2))) {
         $('#footer').css('position', 'absolute');
     }
+
+    let buttonToTop = docuemnt.getElementById('button-to-top');
+    buttonToTop.offsetWidth = window.internalWidth - 32;
+    buttonToTop.offsetHeight = window.internalHeight - 32;
+
+    buttonToTop.addEventListener('scroll', ev => {
+        if (document.scrollHeight > '250px') {
+            buttonToTop.classList.remove('hidden');
+        } else {
+            buttonToTop.classList.add('hidden');
+        }
+    })
 });
 
 function openFind() {

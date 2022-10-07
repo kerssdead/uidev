@@ -52,7 +52,7 @@
 }
 
 body {
-    display: flexbox;
+    /* display: flexbox; */
     margin: 0;
     padding: 0;
 }
@@ -115,6 +115,17 @@ input[type='radio']:checked:before {
 
 input[type='radio']:checked ~ .radio-active:after {
     display: block;
+}
+
+.button-to-top {
+    position: fixed;
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 48px;
+    z-index: 10;
+    /* top: calc(100vh - 96px);
+    left: calc(100vw - 106px); */
 }
 
 /* #region Header */  
