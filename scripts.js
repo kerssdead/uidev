@@ -82,3 +82,8 @@ function slider() {
         current = (current + 1) % items.length
     }, 10 * 1000)
 }
+
+
+function toggleModal() {
+    document.querySelector('.modal-container').classList.toggle('hidden')
+}
