@@ -129,3 +129,21 @@ function modal() {
         })
     })
 }
+
+function preview() {
+    let preview = document.querySelector('.preview')
+    let list = document.querySelectorAll('.hover-preview')
+    list.forEach(v => {
+        v.addEventListener('mouseenter', ev => {
+            preview.style.opacity = 1
+            let left = ev.pageX + "px"
+            let top = ev.pageY + "px"
+            preview.style.left = left
+            preview.style.top = top
+            setTimeout(() => {
+                preview.style.opacity = 0
+            }, 2000)
+        })
+        
+    })
+}
