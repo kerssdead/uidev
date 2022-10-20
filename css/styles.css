@@ -1500,6 +1500,12 @@ i.star {
     background-color: white;
 }
 
+i.star-active {
+    background: url('../img/icons/Vector-s.svg');
+    background-size: 1em 1em;
+    background-color: white;
+}
+
 i.up {
     background: url('../img/icons/up.svg');
     background-size: 1em 1em;
