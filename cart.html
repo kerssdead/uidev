@@ -11,6 +11,7 @@
 </head>
 
 <body class="background-color">
+    
     <div class="modal-container hidden">
         <div class="modal">
             <span>Какую оценку вы бы могли дать нашему магазину?</span>
@@ -106,10 +107,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="red-button">
+                <div class="red-button slide-menu-toggle">
                     <span class="span-header-small">
-                        Отказаться
+                        Выбрать действие
                     </span>
+                    <div class="slide-menu hidden">
+                        <div class="slide-menu__button slide-menu__button-reject">
+                            <span>Отказаться</span>
+                        </div>
+                        <div class="slide-menu__button slide-menu__button-favorite">
+                            <span>Отложить в избранное</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="cart-item-1" class="item-card content-shadow white-color">
@@ -140,8 +149,16 @@
                 </div>
                 <div class="red-button">
                     <span class="span-header-small">
-                        Отказаться
+                        Выбрать действие
                     </span>
+                    <div class="slide-menu hidden">
+                        <div class="slide-menu__button slide-menu__button-reject">
+                            <span>Отказаться</span>
+                        </div>
+                        <div class="slide-menu__button slide-menu__button-favorite">
+                            <span>Отложить в избранное</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="cart-item-2" class="item-card content-shadow white-color">
@@ -172,8 +189,16 @@
                 </div>
                 <div class="red-button">
                     <span class="span-header-small">
-                        Отказаться
+                        Выбрать действие
                     </span>
+                    <div class="slide-menu hidden">
+                        <div class="slide-menu__button slide-menu__button-reject">
+                            <span>Отказаться</span>
+                        </div>
+                        <div class="slide-menu__button slide-menu__button-favorite">
+                            <span>Отложить в избранное</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="total" class="cart-total content-shadow white-color">
@@ -267,6 +292,7 @@
     </footer>
     <script>
         modal()
+        slideMenu()
     </script>
 </body>
 
