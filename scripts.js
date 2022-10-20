@@ -96,7 +96,10 @@ function slider() {
 
 function toggleModal() {
     let c = document.querySelector('.modal-container')
+
     c.classList.toggle('hidden')
+    document.body.classList.toggle('stop-scrolling')
+
     if (!c.classList.contains('hidden')) {
         document.querySelectorAll('i.star-active').forEach(v => {
             v.classList.remove('star-active')
