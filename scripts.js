@@ -12,6 +12,16 @@
 //     }
 // }
 
+document.onreadystatechange = ev => {
+    if (document.readyState == 'complete') {
+        document.querySelectorAll('.scroll-button').forEach(v => {
+            v.addEventListener('click', ev => {
+                scrollToTop()
+            })
+        })
+    }
+}
+
 function openFind() {
     let nav = document.getElementById('navigation-buttons-0')
     let row = document.getElementById('find-row')
@@ -86,4 +96,10 @@ function slider() {
 
 function toggleModal() {
     document.querySelector('.modal-container').classList.toggle('hidden')
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0, behavior: 'smooth'
+    })
 }

@@ -1274,6 +1274,7 @@ header {
 /* #region Footer */
 
 footer {
+    position: relative;
     bottom: 0;
     flex-grow: 1;
     width: 100%;
@@ -1499,6 +1500,11 @@ i.star {
     background-color: white;
 }
 
+i.up {
+    background: url('../img/icons/up.svg');
+    background-size: 1em 1em;
+}
+
 /* #endregion icons*/
 
 /* #region item-tag*/
@@ -1527,3 +1533,34 @@ i.star {
 }
 
 /* #endregion item-tag*/
+
+
+/* #region scroll-to-top button*/
+
+
+
+.scroll-button {
+    width: 64px;
+    height: 64px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 48px;
+    background-color: white;
+    position: absolute;
+    right: 32px;
+    bottom: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.scroll-button i {
+    font-size: 30px;
+    width: 1em;
+    height: 1em;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* #endregion scroll-to-top button*/
