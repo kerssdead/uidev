@@ -471,6 +471,7 @@ header {
 .items {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .item-card {
@@ -611,6 +612,10 @@ header {
 
     cursor: default;
     vertical-align: middle;
+}
+
+.current-page > span {
+    padding-left: 24px;
 }
 
 /* #endregion */
@@ -1495,3 +1500,30 @@ i.star {
 }
 
 /* #endregion icons*/
+
+/* #region item-tag*/
+
+.tags {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.item-tag {
+    width: auto;
+    height: 28px;
+    padding: 2px 15px;
+    background-color: #4B63A9;
+    border-radius: 16px;
+    display: table;
+}
+
+.item-tag span {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    color: white;
+}
+
+/* #endregion item-tag*/
