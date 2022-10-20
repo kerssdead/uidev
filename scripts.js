@@ -142,8 +142,18 @@ function preview() {
             preview.style.top = top
             setTimeout(() => {
                 preview.style.opacity = 0
-            }, 2000)
+            }, 3000)
         })
         
+    })
+}
+
+
+function gallery() {
+    let main = document.querySelector('.image-gallery-main')
+    document.querySelectorAll('.image-gallery__item').forEach(v => {
+        v.addEventListener('click', ev => {
+            main.src = v.querySelector('img').attributes.src.value
+        })
     })
 }
