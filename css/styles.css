@@ -3,14 +3,14 @@
     font-style: normal;
     font-weight: 400;
     src: local("Gothic A1"),
-        url("/fonts/GothicA1-Regular.woff") format("woff")
+        url("../fonts/GothicA1-Regular.woff") format("woff")
 }
 
 @font-face {
     font-family: "Gothic A1";
     font-style: normal;
     font-weight: bold;
-    src: local("/fonts/GothicA1-Bold.woff") format("woff")
+    src: local("../fonts/GothicA1-Bold.woff") format("woff")
 }
 
 * {
