@@ -1,17 +1,3 @@
-// $(document).ready(function () {
-//     if (parseInt($('body')[0].scrollHeight.slice(0, -2)) > parseInt($('body')[0].clientHeight.slice(0, -2))) {
-//         $('#footer').css('position', 'absolute');
-//     }
-// });
-
-// document.onreadystatechange = ev => {
-//     if (document.readyState == 'complete') {
-//         if (document.body.scrollHeight > document.body.clientHeight) {
-//             document.getElementById('footer').style.position = 'absolute'
-//         }
-//     }
-// }
-
 document.onreadystatechange = ev => {
     if (document.readyState == 'complete') {
         document.querySelectorAll('.scroll-button').forEach(v => {
