@@ -98,7 +98,7 @@ input[type='checkbox']:before {
 }
 
 input[type='checkbox']:checked:before {
-    background-image: url("/img/icons/check.svg");
+    background-image: url("../img/icons/check.svg");
 }
 
 input[type='radio'] {
