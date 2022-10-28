@@ -3,14 +3,41 @@
 
 <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="./css/styles.css"/>
     <link rel="stylesheet" href="./font/GothicA1-Regular.woff">
-    <script src="./jquery-3.6.0.js"></script>
     <script src="./scripts.js"></script>
     <title>Главная страница</title>
 </head>
 
 <body class="background-color">
+    <div class="preview">
+        <div class="preview-author">
+            <img class="author-logo" src="./img/dostoevski.jpg" alt="">
+            <span class="author-name">Федор Михайлович Достоевский</span>
+            <span>1821-1881</span>
+            <div class="tags">
+                <div class="item-tag">
+                    <span>Классика</span>
+                </div>
+                <div class="item-tag">
+                    <span>Проза</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container hidden">
+        <div class="modal">
+            <span>Какую оценку вы бы могли дать нашему магазину?</span>
+            <div class="modal-starlist">
+                <i class="star"></i>
+                <i class="star"></i>
+                <i class="star"></i>
+                <i class="star"></i>
+                <i class="star"></i>
+            </div>
+            <span class="modal-submit-review" onclick="toggleModal()">Оценить</span>
+        </div>
+    </div>
     <header>
         <img src="./img/logo.svg"/>    
         <div class="navigation-buttons" id="navigation-buttons-0">
@@ -86,26 +113,30 @@
                 </span>
                 <div id="cat-0">
                     <input type="checkbox" class="content-shadow">
-                    <span>
+                    <span class="tooltip-target">
                         Художественная литература
+                        <div class="tooltip">Данная категория включает литературу от известных писателей, ставших классиками</div>
                     </span>
                 </div>
                 <div id="cat-1">
                     <input type="checkbox" class="content-shadow">
-                    <span>
+                    <span class="tooltip-target">
                         Научная литература
+                        <div class="tooltip">Научная литература включает работы в разных сферах науки</div>
                     </span>
                 </div>
                 <div id="cat-2">
                     <input type="checkbox" class="content-shadow">
-                    <span>
+                    <span class="tooltip-target">
                         Деловая литература
+                        <div class="tooltip">Литература, изучающая деловые отношения</div>
                     </span>
                 </div>
                 <div id="cat-3">
                     <input type="checkbox" class="content-shadow">
-                    <span>
+                    <span class="tooltip-target">
                         Философия
+                        <div class="tooltip">Литературные издания, сочинения, диалоги и работы ученых-философов</div>
                     </span>
                 </div>
                 <div name="show-more" class="content-shadow white-button">
@@ -148,6 +179,29 @@
                     </span>
                 </div>
             </div>
+            <div class="categories">
+                <div class="switch-group">
+                    <span class="f-20">Высокий рейтинг</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="switch-group">
+                    <span class="f-20">Со скидкой</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="switch-group">
+                    <span class="f-20">С отзывами</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
         </div>
         <div class="items">
             <div id="card-0" class="white-color item-card content-shadow">
@@ -157,7 +211,7 @@
                 <span class="span-header-small">
                     Братья Карамазовы
                 </span>
-                <span>
+                <span class="hover-preview">
                     Ф. М. Достоевский
                 </span>
                 <div class="rating-and-price">
@@ -179,6 +233,14 @@
                                 309 ₽
                             </span>
                         </div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="item-tag">
+                        <span>Классика</span>
+                    </div>
+                    <div class="item-tag">
+                        <span>Проза</span>
                     </div>
                 </div>
                 <div class="content-shadow white-color item-buttons">
@@ -201,7 +263,7 @@
                 <span class="span-header-small">
                     Братья Карамазовы
                 </span>
-                <span>
+                <span class="hover-preview">
                     Ф. М. Достоевский
                 </span>
                 <div class="rating-and-price">
@@ -223,6 +285,14 @@
                                 309 ₽
                             </span>
                         </div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="item-tag">
+                        <span>Классика</span>
+                    </div>
+                    <div class="item-tag">
+                        <span>Проза</span>
                     </div>
                 </div>
                 <div class="content-shadow white-color item-buttons">
@@ -245,7 +315,7 @@
                 <span class="span-header-small">
                     Братья Карамазовы
                 </span>
-                <span>
+                <span class="hover-preview">
                     Ф. М. Достоевский
                 </span>
                 <div class="rating-and-price">
@@ -267,6 +337,14 @@
                                 309 ₽
                             </span>
                         </div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="item-tag">
+                        <span>Классика</span>
+                    </div>
+                    <div class="item-tag">
+                        <span>Проза</span>
                     </div>
                 </div>
                 <div class="content-shadow white-color item-buttons">
@@ -289,7 +367,7 @@
                 <span class="span-header-small">
                     Братья Карамазовы
                 </span>
-                <span>
+                <span class="hover-preview">
                     Ф. М. Достоевский
                 </span>
                 <div class="rating-and-price">
@@ -311,6 +389,14 @@
                                 309 ₽
                             </span>
                         </div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="item-tag">
+                        <span>Классика</span>
+                    </div>
+                    <div class="item-tag">
+                        <span>Проза</span>
                     </div>
                 </div>
                 <div class="content-shadow white-color item-buttons">
@@ -333,7 +419,7 @@
                 <span class="span-header-small">
                     Братья Карамазовы
                 </span>
-                <span>
+                <span class="hover-preview">
                     Ф. М. Достоевский
                 </span>
                 <div class="rating-and-price">
@@ -355,6 +441,14 @@
                                 309 ₽
                             </span>
                         </div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="item-tag">
+                        <span>Классика</span>
+                    </div>
+                    <div class="item-tag">
+                        <span>Проза</span>
                     </div>
                 </div>
                 <div class="content-shadow white-color item-buttons">
@@ -377,7 +471,7 @@
                 <span class="span-header-small">
                     Братья Карамазовы
                 </span>
-                <span>
+                <span class="hover-preview">
                     Ф. М. Достоевский
                 </span>
                 <div class="rating-and-price">
@@ -399,6 +493,14 @@
                                 309 ₽
                             </span>
                         </div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="item-tag">
+                        <span>Классика</span>
+                    </div>
+                    <div class="item-tag">
+                        <span>Проза</span>
                     </div>
                 </div>
                 <div class="content-shadow white-color item-buttons">
@@ -421,7 +523,7 @@
                 <span class="span-header-small">
                     Братья Карамазовы
                 </span>
-                <span>
+                <span class="hover-preview">
                     Ф. М. Достоевский
                 </span>
                 <div class="rating-and-price">
@@ -443,6 +545,14 @@
                                 309 ₽
                             </span>
                         </div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="item-tag">
+                        <span>Классика</span>
+                    </div>
+                    <div class="item-tag">
+                        <span>Проза</span>
                     </div>
                 </div>
                 <div class="content-shadow white-color item-buttons">
@@ -465,7 +575,7 @@
                 <span class="span-header-small">
                     Братья Карамазовы
                 </span>
-                <span>
+                <span class="hover-preview">
                     Ф. М. Достоевский
                 </span>
                 <div class="rating-and-price">
@@ -487,6 +597,14 @@
                                 309 ₽
                             </span>
                         </div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="item-tag">
+                        <span>Классика</span>
+                    </div>
+                    <div class="item-tag">
+                        <span>Проза</span>
                     </div>
                 </div>
                 <div class="content-shadow white-color item-buttons">
@@ -509,7 +627,7 @@
                 <span class="span-header-small">
                     Братья Карамазовы
                 </span>
-                <span>
+                <span class="hover-preview">
                     Ф. М. Достоевский
                 </span>
                 <div class="rating-and-price">
@@ -531,6 +649,14 @@
                                 309 ₽
                             </span>
                         </div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="item-tag">
+                        <span>Классика</span>
+                    </div>
+                    <div class="item-tag">
+                        <span>Проза</span>
                     </div>
                 </div>
                 <div class="content-shadow white-color item-buttons">
@@ -553,7 +679,7 @@
                 <span class="span-header-small">
                     Братья Карамазовы
                 </span>
-                <span>
+                <span class="hover-preview">
                     Ф. М. Достоевский
                 </span>
                 <div class="rating-and-price">
@@ -575,6 +701,14 @@
                                 309 ₽
                             </span>
                         </div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="item-tag">
+                        <span>Классика</span>
+                    </div>
+                    <div class="item-tag">
+                        <span>Проза</span>
                     </div>
                 </div>
                 <div class="content-shadow white-color item-buttons">
@@ -597,7 +731,7 @@
                 <span class="span-header-small">
                     Братья Карамазовы
                 </span>
-                <span>
+                <span class="hover-preview">
                     Ф. М. Достоевский
                 </span>
                 <div class="rating-and-price">
@@ -621,6 +755,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="tags">
+                    <div class="item-tag">
+                        <span>Классика</span>
+                    </div>
+                    <div class="item-tag">
+                        <span>Проза</span>
+                    </div>
+                </div>
                 <div class="content-shadow white-color item-buttons">
                     <div name="to-cart" class="blue-button left-border-radius-medium">
                         <span>
@@ -641,7 +783,7 @@
                 <span class="span-header-small">
                     Братья Карамазовы
                 </span>
-                <span>
+                <span class="hover-preview">
                     Ф. М. Достоевский
                 </span>
                 <div class="rating-and-price">
@@ -663,6 +805,14 @@
                                 309 ₽
                             </span>
                         </div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="item-tag">
+                        <span>Классика</span>
+                    </div>
+                    <div class="item-tag">
+                        <span>Проза</span>
                     </div>
                 </div>
                 <div class="content-shadow white-color item-buttons">
@@ -715,8 +865,15 @@
     </div>
 
     <footer id="footer">
+        <div class="scroll-button">
+            <i class="up"></i>
+        </div>
         <span>Все права защищены. Техническая поддержка help@email.com</span>
     </footer>
+    <script>
+        preview()
+
+    </script>
 </body>
 
 </html>

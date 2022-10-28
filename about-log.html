@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="./css/styles.css"/>
     <link rel="stylesheet" href="./font/GothicA1-Regular.woff">
-    <script src="./jquery-3.6.0.js"></script>
     <script src="./scripts.js"></script>
     <title>О нас</title>
 </head>
@@ -65,24 +64,72 @@
     <div class="page-content white-color">
         <div class="page-content-about">
             <div class="about">
-                <span class="span-header-large">
+                <span class="span-header-large center">
                     О нас
                 </span>
-                <span class="span-header-small">
-                    Нашей компании, розничных магазинов и данного интернет-магазина не существует.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit pellentesque. Quisque malesuada placerat metus nec viverra. Integer sit amet lorem sed massa rhoncus porttitor auctor in eros. Mauris lorem mi, ornare rutrum nisi ac, hendrerit placerat mauris. Mauris pellentesque dui sit amet aliquet molestie. Nunc et vehicula odio. Nunc nec auctor ex. Morbi sollicitudin ultricies massa, non vulputate nisl posuere at. Donec blandit justo ac elit sollicitudin pharetra. Vivamus at lorem lectus. Pellentesque et imperdiet dolor. In porttitor feugiat viverra. Donec leo nunc, rutrum sit amet ligula vel, lacinia faucibus justo. Nulla convallis nulla tincidunt velit elementum dapibus. Nam id blandit enim.
-                    Praesent et sapien mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur aliquet dignissim elit, ut rutrum augue ultricies non. Fusce iaculis lorem vitae accumsan luctus. Donec nisi mauris, facilisis a vestibulum luctus, tempor sed mi. Ut pharetra lobortis nisl, vel consectetur diam egestas at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt nisl velit, id lacinia risus consectetur nec. Mauris vestibulum pellentesque sem. Nullam luctus dui sem, non vulputate tortor mollis et. Donec malesuada tincidunt pretium. Donec a orci sed arcu egestas bibendum sed a nulla. Sed et tincidunt lacus. Ut a nibh sed est accumsan facilisis. Nullam nibh sapien, pharetra at lorem eget, imperdiet tincidunt est. Pellentesque vel gravida odio. Proin eleifend justo in finibus fringilla. Fusce sed scelerisque leo. Morbi sit amet vestibulum ante. Nunc nec ligula quis lacus hendrerit condimentum at in eros. Quisque non tellus eu enim mollis laoreet. In sapien mi, iaculis in molestie eget, euismod ut velit. Aenean nec ex risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer quam nunc, congue vitae malesuada vel, bibendum sed erat. Nunc urna turpis, finibus at magna in, lobortis tincidunt orci. Хоть у нас и нет розничных магазинов, но у нас есть карта с нашими магазинами. Можно только представлять, как было бы замечательно посещать эти магазины.
-                </span>
-            </div>
-            <div class="about-on-map">
-                <span class="span-header-large">
-                    Магазины на карте
-                </span>
-                <img src="./img/map.png">
+                
+                <div class="about-href-header">
+                    <span>Краткое содержание</span>
+                    <ul class="about-ul">
+                        <li><a href="#part1"><span>1. О родном городе</span></a></li>
+                        <li><a href="#part2"><span>2. Создание магазина</span></a></li>
+                        <li><a href="#part3"><span>3. Наши дни</span></a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div id="part1">
+                        <h1 class="f-32">О родном городе</h1>
+                        <span class="f-20">
+                            Магазин берет свое начало из далекого Таганрога. Для юных и не столь таковых читателей стоит пояснить - здания в классическом, выдержанном стиле русского классицизма, широкие улицы и обилие зелени. Добрые люди с доброй душой, обилие кофеен, уютные улочки - малый Питер! 
+                            Культура чтения тут, конечно же, развита - посмотрите только на библиотеку чехова, невозоможно не приобщиться к чтению, лицезрея сие с самого детства.
+                        </span>
+                        <br>
+                        <div class="image-slider">
+                            <div class="image-slider__item">
+                                <img src="img/city-1.png" alt="Театр Чехова">
+                            </div>
+                            <div class="image-slider__item">
+                                <img src="img/city-2.png" alt="Библиотека Чехова">
+                            </div>
+                            <div class="image-slider__item">
+                                <img src="img/city-3.png" alt="Дворец Алфераки">
+                            </div>
+                        </div>
+                        <div class="image-slider-buttons">
+                        </div>
+                    </div>
+                    <div id="part2">
+                        <h1 class="f-32">Создание магазина</h1>
+                        <span class="f-20">
+                            Первый магазин был открыт по адресу ул. Петровская 91, тогда это была маленькая книжная лавка. В октябре 2001 года был открыт второй магазин на пер. Красном 21.
+                            Магазин приобрел свою популярность с помощью большого ассортимента иностранной литературы, которая не так популярна, как Русская Проза.   
+                        </span>
+                        <br>
+                    </div>
+                    <div id="part3">
+                        <h1 class="f-32">Наши дни</h1>
+                        <span class="f-20">
+                            В наши дни филиалы магазина открыты почти во всех городах Необъятной. Более 1000 магазинов по всей России работают для вас на протяжении более 20-ти лет!
+                            В магазинах нашей сети представлена самая большая в России коллекция отечственной прозы, а так же произоведений иностранных классиков, таких как Набоков, Филипп К. Дик, 
+                            Гомер, Герадот, Кант, Луи-Фердиан Селин, Зеленский и другие.
+                        </span>
+                        <br>
+                    </div>
+                </div>
+                <div class="about-video">
+                    <video controls width="1280" height="720">
+                        <source src="./video/taganrog.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
         </div>
     </div>
 
     <footer id="footer">
+        <div class="scroll-button">
+            <i class="up"></i>
+        </div>
         <span>Все права защищены. Техническая поддержка help@email.com</span>
     </footer>
 </body>
