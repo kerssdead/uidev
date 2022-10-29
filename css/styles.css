@@ -1499,15 +1499,13 @@ input:checked+.slider:before {
 /* #region icons */
 
 i.star {
-    background: url('../img/icons/Vector.svg');
+    background: url('../img/icons/empty-star.svg');
     background-size: 1em 1em;
-    background-color: white;
 }
 
 i.star-active {
-    background: url('../img/icons/Vector-s.svg');
+    background: url('../img/icons/star.svg');
     background-size: 1em 1em;
-    background-color: white;
 }
 
 i.up {
