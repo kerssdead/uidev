@@ -157,18 +157,18 @@ header {
     flex-grow: 1;
     display: flex;
     align-items: center;
-    padding: 8px;
+    padding: 4px;
 }
 
 .header-button {
     display: inline-flex;
-    padding: 16px 24px 16px 24px;
+    padding: 8px 12px;
     border-radius: 32px;
 }
 
 .header-button:hover {
     background-color: #ffffff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
 .header-button a,
@@ -189,8 +189,8 @@ header {
 .header-button span {
     font-family: "Gothic A1";
     font-style: normal;
-    font-size: 28px;
-    line-height: 35px;
+    font-size: 24px;
+    line-height: 32px;
     font-weight: bold;
     align-items: center;
     text-align: center;
@@ -279,7 +279,7 @@ header {
     border-radius: 32px;
 
     padding: 16px;
-    margin: 8px 0 8px 0;
+    margin: 4px 0 4px 0;
 }
 
 /* #region IndexPage */
@@ -1268,7 +1268,7 @@ header {
 /* #endregion */
 
 .header-name {
-    font-size: 28px;
+    font-size: 24px;
     align-self: center;
     color: white;
 }
@@ -1511,6 +1511,18 @@ i.star-active {
 i.up {
     background: url('../img/icons/up.svg');
     background-size: 1em 1em;
+}
+
+.ic-size-32 {
+    height: 32px;
+}
+
+.ic-size-48 {
+    height: 48px;
+}
+
+.ic-size-64 {
+    height: 64px;
 }
 
 /* #endregion icons*/
