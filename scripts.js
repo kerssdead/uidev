@@ -124,6 +124,7 @@ function preview() {
     let list = document.querySelectorAll('.hover-preview')
     list.forEach(v => {
         v.addEventListener('mouseenter', ev => {
+            preview.classList.remove('hidden')
             preview.style.opacity = 1
             let left = ev.pageX + "px"
             let top = ev.pageY + "px"
@@ -132,6 +133,9 @@ function preview() {
             setTimeout(() => {
                 preview.style.opacity = 0
             }, 3000)
+            setTimeout(() => {
+                preview.classList.add('hidden')
+            }, 3500)
         })
         
     })
