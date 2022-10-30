@@ -147,8 +147,6 @@ input[type='radio']:checked ~ .radio-active:after {
     height: 64px;
     border-radius: 48px;
     z-index: 10;
-    /* top: calc(100vh - 96px);
-    left: calc(100vw - 106px); */
 }
 
 /* #region Header */  
