@@ -158,14 +158,14 @@ function slideMenu() {
         v.querySelectorAll('.slide-menu .slide-menu__button').forEach(b => {
             b.onclick = ev => {
                 v.querySelector('.slide-menu').classList.add('hidden')
-                v.querySelector('.span-header-small').classList.remove('hidden')
+                v.querySelector('.text-size-20').classList.remove('hidden')
             }
         })
     })
     
     buttons.forEach(v => {
-        v.querySelector('.span-header-small').onclick = ev => {
-            v.querySelector('.span-header-small').classList.add('hidden')
+        v.querySelector('.text-size-20').onclick = ev => {
+            v.querySelector('.text-size-20').classList.add('hidden')
             v.querySelector('.slide-menu').classList.remove('hidden')
         }
     })
