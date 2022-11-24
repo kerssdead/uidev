@@ -42,6 +42,10 @@
     font-size: 36px;
 }
 
+.valign-super {
+    vertical-align: super;
+}
+
 /* #endregion */
 
 /* #region Position */
