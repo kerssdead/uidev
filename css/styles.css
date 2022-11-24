@@ -1245,6 +1245,10 @@ header {
     margin: 20px auto;
 }
 
+video {
+    border-radius: 16px;
+}
+
 /* #endregion */
 
 /* #region UserPage */
