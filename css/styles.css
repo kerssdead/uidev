@@ -398,7 +398,7 @@ body {
 /* #endregion */
 
 .content-shadow {
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
 }
 
 /* #endregion */
