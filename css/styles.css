@@ -417,6 +417,7 @@ header {
     display: inline-flex;
     padding: 8px 12px;
     border-radius: 32px;
+    transition: background-color .3s ease;
 }
 
 .header-button:hover {
@@ -451,15 +452,16 @@ header {
     color: #ffffff;
 
     cursor: default;
+    transition: color .3s ease;
 }
 
 .navigation-buttons {
     display: flex;
+    gap: 8px;
 }
 
 .header-reverse {
     flex-direction: row-reverse;
-    /* flex-grow: 1; */
     gap: 16px;
     font-family: "Gothic A1";
     font-weight: bold;
@@ -498,11 +500,11 @@ header {
 }
 
 .find-button-show {
-    animation: show .8s ease-in forwards;
+    animation: show .6s ease-in forwards;
 }
 
 .find-button-hide {
-    animation: hide .8s ease-in forwards;
+    animation: hide .6s ease-in forwards;
 }
 
 @keyframes show {
@@ -726,6 +728,7 @@ header {
     color: #000000;
     height: 32px;
     border-radius: 16px;
+    transition: background-color .3s ease;
 }
 
 .white-button span {
@@ -735,6 +738,7 @@ header {
     padding: 8px 0 8px 0;
     cursor: default;
     line-height: 16px;
+    transition: color .3s ease;
 }
 
 .white-button:hover {
@@ -755,6 +759,7 @@ header {
     color: #ffffff !important;
     height: 32px;
     border-radius: 16px;
+    transition: background-color .3s ease;
 }
 
 .blue-button span {
@@ -765,6 +770,7 @@ header {
     cursor: default;
     line-height: 16px;
     color: #ffffff !important;
+    transition: color .3s ease;
 }
 
 .blue-button:hover {
@@ -781,6 +787,7 @@ header {
     color: white !important;
     height: 32px;
     border-radius: 16px;
+    transition: background-color .3s ease;
 }
 
 .red-button span {
@@ -791,6 +798,7 @@ header {
     cursor: default;
     line-height: 16px;
     color: white !important;
+    transition: color .3s ease;
 }
 
 .red-button:hover {
@@ -807,6 +815,7 @@ header {
     color: white !important;
     height: 32px;
     border-radius: 16px;
+    transition: background-color .3s ease
 }
 
 .green-button span {
@@ -817,6 +826,7 @@ header {
     cursor: default;
     line-height: 16px;
     color: white !important;
+    transition: color .3s ease;
 }
 
 .green-button:hover {
