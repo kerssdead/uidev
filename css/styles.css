@@ -469,10 +469,11 @@ header {
 .find-row {
     flex-grow: 1;
     display: inline-flex;
-    padding: 16px;
+    padding: 8px;
     align-items: center;
     border-radius: 32px;
-    max-height: 35px;
+    max-height: 24px;
+    margin: 0 32px
 }
 
 .find-row textarea {
@@ -483,7 +484,7 @@ header {
     outline: none;
 
     overflow: hidden;
-    font-size: 28px;
+    font-size: 20px;
     font-family: "Gothic A1";
     font-weight: bold;
 }
