@@ -531,6 +531,19 @@ header {
     color: white;
 }
 
+.navigation-buttons > a {
+    border-radius: 20px;    
+    transition: all .3s ease;
+}
+
+.navigation-buttons > a:hover {
+    background-color: white;
+}
+
+.navigation-buttons > a:hover > img {
+    filter: invert(0%) sepia(5%) saturate(0%) hue-rotate(357deg) brightness(100%) contrast(106%);
+}
+
 /* #endregion */
 
 /* #region Page */
