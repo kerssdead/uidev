@@ -558,6 +558,14 @@ header {
     margin: 4px 0 4px 0;
 }
 
+.background {
+    background-image: url("../img/background.svg");
+}
+
+.background-alt { 
+    background-image: url("../img//background-alt.svg");
+}
+
 .tags {
     display: flex;
     justify-content: left;
@@ -1614,10 +1622,6 @@ video {
 /* #endregion */
 
 /* #region Register Page */
-
-.login-background {
-    background-image: url("../img/background.svg");
-}
 
 .login-page-content {
     width: 25%;
