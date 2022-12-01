@@ -123,21 +123,26 @@ function preview() {
     let preview = document.querySelector('.preview')
     let list = document.querySelectorAll('.hover-preview')
     list.forEach(v => {
+        let vCoords = v.getBoundingClientRect();
+
         v.addEventListener('mouseenter', ev => {
-            preview.classList.remove('hidden')
-            preview.style.opacity = 1
-            let left = ev.pageX + "px"
-            let top = ev.pageY + "px"
+            let left = vCoords.left + "px"
+            let top = vCoords.bottom + "px"
             preview.style.left = left
-            preview.style.top = top
+            preview.style.top = (parseInt(vCoords.bottom) + 10) + 'px'
+            preview.classList.remove('hidden')
             setTimeout(() => {
-                preview.style.opacity = 0
-            }, 3000)
+                preview.style.top = top
+                preview.style.opacity = 1
+            }, .1)
+        })
+        v.addEventListener('mouseleave', ev => {
+            preview.style.top = (parseInt(vCoords.bottom) + 10) + 'px'
+            preview.style.opacity = 0
             setTimeout(() => {
                 preview.classList.add('hidden')
-            }, 3500)
+            }, 300)
         })
-        
     })
 }
 

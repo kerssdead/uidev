@@ -608,8 +608,9 @@ header {
 
 .preview {
     position: absolute;
+    margin-top: 8px;
     opacity: 0;
-    transition: opacity .5s ease;
+    transition: all .3s ease-in-out;
 }
 
 .preview-author {
