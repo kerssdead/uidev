@@ -658,11 +658,13 @@ header {
 
 .tooltip-target .tooltip {
     visibility: hidden;
-    
+    opacity: 0;
+    transition: all .3s ease-in-out;
 }
 
 .tooltip-target:hover .tooltip {
     visibility: visible;
+    opacity: 1;
 }
 
 .tooltip {
