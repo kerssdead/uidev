@@ -126,8 +126,12 @@ function preview() {
         let vCoords = v.getBoundingClientRect();
 
         v.addEventListener('mouseenter', ev => {
-            let left = vCoords.left + "px"
-            let top = vCoords.bottom + "px"
+            if (!preview.classList.contains('hidden')) {
+                return
+            }
+
+            let left = vCoords.left + 'px'
+            let top = vCoords.bottom + 'px'
             preview.style.left = left
             preview.style.top = (parseInt(vCoords.bottom) + 10) + 'px'
             preview.classList.remove('hidden')
