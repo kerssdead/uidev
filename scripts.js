@@ -5,6 +5,18 @@ document.onreadystatechange = ev => {
                 scrollToTop()
             })
         })
+
+        document.addEventListener('scroll', () => {
+            if (this.scrollY > 500) {
+                var scrollButton = document.querySelector('.scroll-button');
+                scrollButton.style.opacity = 1;
+                scrollButton.style.transform = 'scale(1)';
+            } else {
+                var scrollButton = document.querySelector('.scroll-button');
+                scrollButton.style.opacity = 0;
+                scrollButton.style.transform = 'scale(.67)';
+            }
+        })
     }
 }
 
