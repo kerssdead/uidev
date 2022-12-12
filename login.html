@@ -13,34 +13,71 @@
 <body class="background">
     <div class="empty-page">
         <img src="./img/logo.svg" style="margin-bottom: 16px;">
-        <div class="login-page-content white-color content-shadow">
-            <span class="text-size-20">
-                Войдите через социальные сети
-            </span>
-            <div class="socials-list">
-                <img src="./img/icons/facebook.svg" class="svg-primary">
-                <img src="./img/icons/google.svg" class="svg-primary">
-                <img src="./img/icons/yahoo.svg" class="svg-primary">
+        <div class="login-page-content white-color content-shadow" style="transition: all .09s ease-in-out;">
+            <div class="login-page-content-in" id="login" style="transition: all .18s ease-in-out;">
+                <span class="text-size-20">
+                    Войдите через социальные сети
+                </span>
+                <div class="socials-list">
+                    <img src="./img/icons/facebook.svg" class="svg-primary">
+                    <img src="./img/icons/google.svg" class="svg-primary">
+                    <img src="./img/icons/yahoo.svg" class="svg-primary">
+                </div>
+                <span class="span-color-gray" style="margin-bottom: 8px;">
+                    Или
+                </span>
+                <div class="input-text white-color content-shadow">
+                    <textarea rows="1" placeholder="Электронная почта"></textarea>
+                </div>
+                <div class="input-text white-color content-shadow">
+                    <textarea rows="1" placeholder="Пароль"></textarea>
+                </div>
+                <div class="blue-button content-shadow">
+                    <a href="./index-log.html">
+                        <span>
+                            Войти
+                        </span>
+                    </a>
+                </div>
+                <span class="forget-password span-color-gray">
+                    <a href="#" onclick="changeLogin()">Нет аккаунта?</a>
+                </span>
             </div>
-            <span class="span-color-gray" style="margin-bottom: 8px;">
-                Или
-            </span>
-            <div class="input-text white-color content-shadow">
-                <textarea rows="1" placeholder="Электронная почта"></textarea>
+            <div class="login-page-content-in hidden" id="register" style="transition: all .18s ease-in-out; opacity: 0;">
+                <span class="text-size-20">
+                    Зарегиструйтесь используя социальные сети
+                </span>
+                <div class="socials-list">
+                    <img src="./img/icons/facebook.svg" class="svg-primary">
+                    <img src="./img/icons/google.svg" class="svg-primary">
+                    <img src="./img/icons/yahoo.svg" class="svg-primary">
+                </div>
+                <span class="span-color-gray" style="margin-bottom: 8px;">
+                    Или
+                </span>
+                <div class="input-text white-color content-shadow">
+                    <textarea rows="1" placeholder="Имя"></textarea>
+                </div>
+                <div class="input-text white-color content-shadow">
+                    <textarea rows="1" placeholder="Электронная почта"></textarea>
+                </div>
+                <div class="input-text white-color content-shadow">
+                    <textarea rows="1" placeholder="Пароль"></textarea>
+                </div>
+                <div class="input-text white-color content-shadow">
+                    <textarea rows="1" placeholder="Повторите пароль"></textarea>
+                </div>
+                <div class="blue-button content-shadow">
+                    <a href="./index-log.html">
+                        <span>
+                            Зарегистрироваться
+                        </span>
+                    </a>
+                </div>
+                <span class="forget-password span-color-gray">
+                    <a href="#" onclick="changeLogin()">У вас уже есть аккаунт?</a>
+                </span>
             </div>
-            <div class="input-text white-color content-shadow">
-                <textarea rows="1" placeholder="Пароль"></textarea>
-            </div>
-            <div class="blue-button content-shadow">
-                <a href="./index-log.html">
-                    <span>
-                        Войти
-                    </span>
-                </a>
-            </div>
-            <span class="forget-password span-color-gray">
-                <a href="./register.html">Нет аккаунта?</a>
-            </span>
         </div>
     </div>
 

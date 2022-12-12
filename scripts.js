@@ -193,3 +193,34 @@ function slideMenu() {
 
 
 }
+
+function changeLogin() {
+    var register = document.querySelector('#register');
+    var login = document.querySelector('#login');
+
+    if (register.classList.contains('hidden')) {
+        login.style.opacity = 0;
+        setTimeout(() => {
+            login.classList.toggle('hidden');
+            register.classList.toggle('hidden');
+            if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                document.querySelector('.login-page-content').style.height = '383px';
+            };
+        }, 180);
+        setTimeout(() => {
+            register.style.opacity = 1;
+        }, 270);
+    } else {
+        register.style.opacity = 0;
+        setTimeout(() => {
+            register.classList.toggle('hidden');
+            login.classList.toggle('hidden');
+            if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                document.querySelector('.login-page-content').style.height = '287px';
+            };
+        }, 180);
+        setTimeout(() => {
+            login.style.opacity = 1;
+        }, 270);
+    }
+}

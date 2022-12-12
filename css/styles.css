@@ -377,10 +377,12 @@ input:checked+.slider:before {
 /* #region Utility */
 
 .hidden {
-    display: none;
+    display: none !important;
     visibility: hidden;
-    max-width: 0 !important;
-    max-height: 0 !important;
+    width: 0;
+    height: 0;
+    /* max-width: 0 !important;
+    max-height: 0 !important; */
     padding: 0 !important;
     margin: 0 !important;
 }
@@ -1637,9 +1639,20 @@ video {
     width: 25%;
     border-radius: 32px;
     padding: 8px;
+}
+
+.login-page-content-in {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.login-page-content:has(#register.hidden) {
+    height: 287px;
+}
+
+.login-page-content:has(#login.hidden) {
+    height: 383px;
 }
 
 .footer-bottom {
