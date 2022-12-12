@@ -626,6 +626,7 @@ header {
     margin-top: 8px;
     opacity: 0;
     transition: all .3s ease-in-out;
+    z-index: 5;
 }
 
 .preview-author {
