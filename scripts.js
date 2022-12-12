@@ -1,22 +1,24 @@
 document.onreadystatechange = ev => {
     if (document.readyState == 'complete') {
-        document.querySelectorAll('.scroll-button').forEach(v => {
-            v.addEventListener('click', ev => {
-                scrollToTop()
+        var scrollButton = document.querySelector('.scroll-button');
+        
+        if (scrollButton) {
+            scrollButton.forEach(v => {
+                v.addEventListener('click', ev => {
+                    scrollToTop()
+                })
             })
-        })
 
-        document.addEventListener('scroll', () => {
-            if (this.scrollY > 500) {
-                var scrollButton = document.querySelector('.scroll-button');
-                scrollButton.style.opacity = 1;
-                scrollButton.style.transform = 'scale(1)';
-            } else {
-                var scrollButton = document.querySelector('.scroll-button');
-                scrollButton.style.opacity = 0;
-                scrollButton.style.transform = 'scale(.67)';
-            }
-        })
+            document.addEventListener('scroll', () => {
+                if (this.scrollY > 500) {
+                    scrollButton.style.opacity = 1;
+                    scrollButton.style.transform = 'scale(1)';
+                } else {
+                    scrollButton.style.opacity = 0;
+                    scrollButton.style.transform = 'scale(.67)';
+                }
+            })
+        }
     }
 }
 
@@ -209,6 +211,7 @@ function changeLogin() {
         }, 180);
         setTimeout(() => {
             register.style.opacity = 1;
+            document.title = "Регистрация";
         }, 270);
     } else {
         register.style.opacity = 0;
@@ -221,6 +224,7 @@ function changeLogin() {
         }, 180);
         setTimeout(() => {
             login.style.opacity = 1;
+            document.title = "Войти";
         }, 270);
     }
 }
