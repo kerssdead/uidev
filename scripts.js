@@ -3,11 +3,9 @@ document.onreadystatechange = ev => {
         var scrollButton = document.querySelector('.scroll-button');
         
         if (scrollButton) {
-            scrollButton.forEach(v => {
-                v.addEventListener('click', ev => {
+            scrollButton.addEventListener('click', ev => {
                     scrollToTop()
                 })
-            })
 
             document.addEventListener('scroll', () => {
                 if (this.scrollY > 500) {
