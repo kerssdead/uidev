@@ -97,37 +97,11 @@ function toggleModal() {
 
     c.classList.toggle('hidden')
     document.body.classList.toggle('stop-scrolling')
-
-    if (!c.classList.contains('hidden')) {
-        document.querySelectorAll('i.star-active').forEach(v => {
-            v.classList.remove('star-active')
-            v.classList.add('star')
-        })
-    }
 }
 
 function scrollToTop() {
     window.scrollTo({
         top: 0, behavior: 'smooth'
-    })
-}
-
-function modal() {
-    let list = document.querySelectorAll('i.star')
-    list.forEach((v, i) => {
-        v.addEventListener('click', ev => {
-            for (let j = 0; j < list.length; j++) {
-                const child = list[j]
-                if (j <= i) {
-                    child.classList.remove('star')
-                    child.classList.add('star-active')
-                }
-                else {
-                    child.classList.remove('star-active')
-                    child.classList.add('star')
-                }
-            }
-        })
     })
 }
 

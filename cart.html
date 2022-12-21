@@ -13,15 +13,34 @@
     
     <div class="modal-container hidden">
         <div class="modal">
-            <span>Какую оценку вы бы могли дать нашему магазину?</span>
-            <div class="modal-starlist">
-                <i class="star svg-primary"></i>
-                <i class="star svg-primary"></i>
-                <i class="star svg-primary"></i>
-                <i class="star svg-primary"></i>
-                <i class="star svg-primary"></i>
+            <div class="payment">
+                <span class="text-size-20 modal-title">
+                    Способы оплаты
+                </span>
+                <div>
+                    <input type="radio" class="content-shadow radio-active" name="payment-method">
+                    <span>
+                        Mastercard оконч. на **** 9999
+                    </span>
+                </div>
+                <div>
+                    <input type="radio" class="content-shadow radio-active" name="payment-method">
+                    <span>
+                        Visa оконч. на **** 1111
+                    </span>
+                </div>
+                <div>
+                    <input type="radio" class="content-shadow radio-active" name="payment-method">
+                    <span>
+                        Оплата при получении
+                    </span>
+                </div>
             </div>
-            <span class="modal-submit-review" onclick="toggleModal()">Оценить</span>
+            <div class="white-button content-shadow" id="button-submit" onclick="toggleModal()">
+                <span>
+                    Подтвердить
+                </span>
+            </div>
         </div>
     </div>
     <header>
@@ -258,29 +277,6 @@
                 </span>
             </div>
         </div>
-        <div class="payment white-color content-shadow hidden">
-            <span class="text-size-20">
-                Способы оплаты
-            </span>
-            <div>
-                <input type="radio" class="content-shadow radio-active" name="payment-method">
-                <span>
-                    Mastercard оконч. на **** 9999
-                </span>
-            </div>
-            <div>
-                <input type="radio" class="content-shadow radio-active" name="payment-method">
-                <span>
-                    Visa оконч. на **** 1111
-                </span>
-            </div>
-            <div>
-                <input type="radio" class="content-shadow radio-active" name="payment-method">
-                <span>
-                    Оплата при получении
-                </span>
-            </div>
-        </div>
         <div class="cart-submit green-button" onclick="toggleModal()">
             <span>
                 Оплатить
@@ -292,7 +288,6 @@
         <span>Все права защищены. Техническая поддержка help@email.com</span>
     </footer>
     <script>
-        modal()
         slideMenu()
     </script>
 </body>
