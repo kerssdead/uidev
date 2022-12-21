@@ -150,7 +150,7 @@ function preview() {
             setTimeout(() => {
                 preview.style.top = top
                 preview.style.opacity = 1
-            }, .1)
+            }, 1)
         })
         v.addEventListener('mouseleave', ev => {
             preview.style.top = (parseInt(vCoords.bottom) + 10) + 'px'
