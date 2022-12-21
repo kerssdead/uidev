@@ -1916,7 +1916,12 @@ footer {
 
     .cart-submit {
         margin-top: auto;
-    }    
+    }
+
+    .pic-and-rating {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* #endregion */
