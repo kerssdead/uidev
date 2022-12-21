@@ -738,6 +738,11 @@ header {
     color: #000000;
 }
 
+.sort > .orders {
+    display: flex;
+    flex-direction: column;
+}
+
 .categories div,
 .authors div {
     margin: 4px 0 4px 0;
@@ -1749,6 +1754,67 @@ footer {
     text-align: center;
     color: #ffffff;
     margin: 16px 0 16px 0;
+}
+
+/* #endregion */
+
+/* #region Adaptive */
+
+@media (orientation: portrait) {
+    .page-content {
+        flex-direction: column;
+    }
+
+    .div-sort-filter {
+        width: calc(100% - 66px);
+        display: grid;
+    }
+
+    .div-sort-filter > .sort > .orders {
+        flex-direction: row;
+        gap: 2%;
+    }
+
+    .div-sort-filter > .sort > .orders > * {
+        width: 49%;
+    }
+
+    .about {
+        width: calc(100% - 32px);
+    }
+
+    .image-slider {
+        width: calc(100% - 32px);
+    }
+
+    .image-slider > .image-slider__item {
+        width: 100%;
+    }
+
+    .about-video > video {
+        width: 100%;
+        height: fit-content;
+    }
+
+    #login #footer {
+        font-size: 24px;
+        padding-bottom: 16px;
+    }
+
+    #login {
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+
+    #login .empty-page {
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+
+    .login-page-content {
+        width: 50%;
+    }
 }
 
 /* #endregion */
