@@ -1506,6 +1506,11 @@ video {
     font-weight: bold;
 }
 
+.cart-area {
+    display: flex;
+    flex-direction: row;
+}
+
 .cart-list {
     display: flex;
     flex-direction: row;
@@ -1796,25 +1801,93 @@ footer {
         height: fit-content;
     }
 
-    #login #footer {
+    #login-page #footer {
         font-size: 24px;
         padding-bottom: 16px;
     }
 
-    #login {
-        background-repeat: no-repeat;
+    #login-page {
+        background-repeat: repeat;
         background-size: cover;
-        
+        background-position: 43%;
     }
 
-    #login .empty-page {
+    #login-page .empty-page {
         min-width: 100vw;
         min-height: 100vh;
     }
 
     .login-page-content {
+        width: 70%;
+    }
+
+    .navigation-buttons {
+        gap: 4px;
+    }
+
+    .header-name {
+        display: none;
+        visibility: hidden;
+    }
+
+    .header-button {
+        align-self: center;
+    }
+
+    .user-inf {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-inf .user-picture,
+    .user-inf .blue-button,
+    .user-about .user-name {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .user-inf .blue-button {
         width: 50%;
     }
+
+    .user-inf .user-inf-grid {
+        display: flex;
+        flex-direction: column;
+        max-height: none;
+        margin-left: 0 !important;
+        row-gap: 32px;
+    }
+
+    .user-inf .user-inf-grid > * {
+        min-width: none;
+        max-width: none;
+        width: calc(100% - 32px);
+    }
+
+    .user-payment {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-content:has(.user-about),
+    .cart-page-content {
+        height: calc(100vh - 172px);
+    }
+
+    .cart-page-content .cart-area {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .cart-total {
+        margin-top: auto;
+        flex-grow: 0;
+    }
+
+    .cart-submit {
+        margin-top: auto;
+    }    
 }
 
 /* #endregion */
